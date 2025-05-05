@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "C:\\Users\\hp\\Downloads\\flutter_windows_3.13.7-stable\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\hp\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\hp\\Desktop\\Flutter\\ecommerce\\ecommerce_app_frontend\\android\\app\\.cxx\\Debug\\4k1u323x\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\hp\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\hp\\Desktop\\Flutter\\ecommerce\\ecommerce_app_frontend\\android\\app\\.cxx\\Debug\\4k1u323x\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

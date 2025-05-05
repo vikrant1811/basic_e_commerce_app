@@ -1,0 +1,2 @@
+C:/Users/hp/Desktop/Flutter/ecommerce/ecommerce_app_frontend/android/app/.cxx/Debug/4k1u323x/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/hp/Desktop/Flutter/ecommerce/ecommerce_app_frontend/android/app/.cxx/Debug/4k1u323x/armeabi-v7a/CMakeFiles/rebuild_cache.dir

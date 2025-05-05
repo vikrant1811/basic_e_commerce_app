@@ -1,21 +1,11 @@
-import 'package:basic_e_commerce_app/screens/splash_screen.dart';
+import 'package:basic_e_commerce_app/src/app.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'E-Commerce App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const SplashScreen(),
-    );
-  }
+  runApp(
+    const ProviderScope(
+      child: App(),
+    ),
+  );
 }
