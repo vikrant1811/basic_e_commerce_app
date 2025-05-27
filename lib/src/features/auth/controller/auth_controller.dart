@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:basic_e_commerce_app/src/features/auth/forgot_password/reset_password_screen.dart';
 import 'package:basic_e_commerce_app/src/features/auth/views/otp_verification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -44,7 +43,7 @@ class AuthController extends StateNotifier<bool> {
         backgroundColor: Colors.white,
         content: Row(
           children: [
-            CircularProgressIndicator(color: BasicColors.blue),
+            CircularProgressIndicator(color: AppColors.blue),
             const SizedBox(width: 20),
             const Text("Verifying..."),
           ],
@@ -72,7 +71,7 @@ class AuthController extends StateNotifier<bool> {
             ? AuthenticationMessages.otpVerificationSuccess
             : (data['message'] ),
         backgroundColor: otpVerifiedSuccess
-            ? BasicColors.green
+            ? AppColors.green
             : const Color.fromARGB(255, 215, 101, 93),
       );
 
@@ -116,7 +115,7 @@ class AuthController extends StateNotifier<bool> {
           content: Row(
             children: [
               CircularProgressIndicator(
-                color: BasicColors.blue,
+                color: AppColors.blue,
               ),
               SizedBox(width: 20),
               Text("Signing in..."),
@@ -144,7 +143,7 @@ class AuthController extends StateNotifier<bool> {
                   ? "${AuthenticationMessages.signUpSuccess} as $email"
                   : data['message'],
               backgroundColor: success
-                  ? BasicColors.green
+                  ? AppColors.green
                   : const Color.fromARGB(255, 215, 101, 93),
             );
             context.pop();
@@ -186,7 +185,7 @@ class AuthController extends StateNotifier<bool> {
           content: Row(
             children: [
               CircularProgressIndicator(
-                color: BasicColors.blue,
+                color: AppColors.blue,
               ),
               const SizedBox(width: 20),
               const Text("Logging In..."),
@@ -210,7 +209,7 @@ class AuthController extends StateNotifier<bool> {
                 ? "${AuthenticationMessages.signInSuccess} as $email"
                 : data['message'],
             backgroundColor: success
-                ? BasicColors.green
+                ? AppColors.green
                 : const Color.fromARGB(255, 215, 101, 93),
           );
          // final userData = data['data']['user'];
@@ -260,7 +259,7 @@ class AuthController extends StateNotifier<bool> {
           content: Row(
             children: [
               CircularProgressIndicator(
-                color: BasicColors.blue,
+                color: AppColors.blue,
               ),
               SizedBox(width: 20),
               Text("Sending otp..."),
@@ -285,7 +284,7 @@ class AuthController extends StateNotifier<bool> {
                   ? "${AuthenticationMessages.otpSendSuccessfully} to $email"
                   : data['message'],
               backgroundColor: success
-                  ? BasicColors.green
+                  ? AppColors.green
                   : const Color.fromARGB(255, 215, 101, 93),
             );
             context.pop();
@@ -437,7 +436,7 @@ class AuthController extends StateNotifier<bool> {
       SnackBarService.showSnackBar(
         context: context,
         message: AuthenticationMessages.passwordDoNotMatch,
-        backgroundColor: BasicColors.red,
+        backgroundColor: AppColors.red,
       );
       return;
     }
@@ -452,7 +451,7 @@ class AuthController extends StateNotifier<bool> {
           content: Row(
             children: [
               CircularProgressIndicator(
-                color: BasicColors.blue,
+                color: AppColors.blue,
               ),
               SizedBox(width: 20),
               Text("Resetting password..."),
@@ -485,7 +484,7 @@ class AuthController extends StateNotifier<bool> {
           message: resetSuccess
               ? AuthenticationMessages.passwordResetSuccess
               : data['message'],
-          backgroundColor: resetSuccess ? BasicColors.green : BasicColors.red,
+          backgroundColor: resetSuccess ? AppColors.green : AppColors.red,
         );
 
         if (resetSuccess) {
@@ -502,7 +501,7 @@ class AuthController extends StateNotifier<bool> {
       SnackBarService.showSnackBar(
         context: context,
         message: AuthenticationMessages.passwordResetFailed,
-        backgroundColor: BasicColors.red,
+        backgroundColor: AppColors.red,
       );
     } finally {
       context.pop(); // Close loading dialog
@@ -524,7 +523,7 @@ class AuthController extends StateNotifier<bool> {
         backgroundColor: Colors.white,
         content: Row(
           children: [
-            CircularProgressIndicator(color: BasicColors.blue),
+            CircularProgressIndicator(color: AppColors.blue),
             SizedBox(width: 20),
             Text("Resending OTP..."),
           ],
@@ -547,7 +546,7 @@ class AuthController extends StateNotifier<bool> {
               ? "${AuthenticationMessages.otpReSendSuccessfully} to $email"
               : data['message'] as String,
           backgroundColor: success
-              ? BasicColors.green
+              ? AppColors.green
               : const Color.fromARGB(255, 215, 101, 93),
         );
       } else {

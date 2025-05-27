@@ -5,6 +5,10 @@ class AppColors {
   static const white = Colors.white;
   static const grey = Colors.grey;
   static const theme = Colors.teal;
+  static Color red =  Colors.red;
+  static Color yellow = Colors.yellow;
+  static Color green = Colors.green;
+  static Color blue = Colors.blue;
   static const greyBackgroundColor = Color(0xFFF4F6F9);
   static const primaryBackgroundColor = Color(0xFF47A374);
   static const backgroundColor = Color(0xFFF4F6F9);
@@ -20,10 +24,7 @@ class BasicColors {
   static Color deepWhite = const Color(0xFFFFFFFF);
   static Color lightBlack = const Color(0xFF393E48);
   static Color deepBlack = const Color(0xFF222831);
-  static Color red =  Colors.red;
-  static Color yellow = Colors.yellow;
-  static Color green = Colors.green;
-  static Color blue = Colors.blue;
+
 
 
 }

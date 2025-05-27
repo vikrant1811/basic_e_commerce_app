@@ -76,7 +76,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                     SnackBarService.showSnackBar(
                       context: context,
                       message: "Invalid email format",
-                      backgroundColor: BasicColors.red,
+                      backgroundColor: AppColors.red,
                     );
                     return;
                   }

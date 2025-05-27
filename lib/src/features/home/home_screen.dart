@@ -13,6 +13,7 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final productsAsync = ref.watch(productProvider);
+    final TextEditingController _searchController = TextEditingController();
     final query = ref.watch(searchQueryProvider).toLowerCase();
 
     return SafeArea(
@@ -29,7 +30,10 @@ class HomeScreen extends ConsumerWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              const SearchBarWidget(),
+              SearchBarWidget(
+                controller: _searchController,
+                hintText: 'Search...',
+              ),
               const SizedBox(height: 12),
               Expanded(
                 child: productsAsync.when(

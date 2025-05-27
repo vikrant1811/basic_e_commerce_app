@@ -1,7 +1,7 @@
+import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:basic_e_commerce_app/src/models/product_model.dart';
 import 'package:basic_e_commerce_app/src/core/services/api_service.dart';
-
 import '../../models/user_model.dart';
 
 
@@ -18,11 +18,10 @@ final productProvider = FutureProvider<List<ProductModel>>((ref) async {
 
 final searchQueryProvider = StateProvider<String>((ref) => '');
 final bottomNavIndexProvider = StateProvider<int>((ref) => 0);
-
 final authTokenProvider = StateProvider<String?>((ref) => null);
 final currentUserProvider = StateProvider<User?>((ref) => null);
 //final statusProvider = StateProvider<Status?>((ref) => null);
 final warehouseSwitchProvider = StateProvider<bool>((ref) => false);
-//final selectedAvatarFileProvider = StateProvider<File?>((ref) => null);
+final selectedAvatarFileProvider = StateProvider<File?>((ref) => null);
 
 

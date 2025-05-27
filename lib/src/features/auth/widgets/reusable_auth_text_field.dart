@@ -119,7 +119,7 @@ class _ReusableAuthTextFieldState extends State<ReusableAuthTextField> {
                     ? widget.focusedBorderColor ?? AppColors.theme
                     : isValid
                     ? widget.defaultBorderColor ?? AppColors.grey
-                    : widget.errorBorderColor ?? BasicColors.red,
+                    : widget.errorBorderColor ?? AppColors.red,
               ),
             ),
             focusedBorder: OutlineInputBorder(
@@ -132,14 +132,14 @@ class _ReusableAuthTextFieldState extends State<ReusableAuthTextField> {
             errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: BorderSide(
-                color: widget.errorBorderColor ?? BasicColors.red,
+                color: widget.errorBorderColor ?? AppColors.red,
                 width: 1,
               ),
             ),
             errorText: isValid || _focusNode.hasFocus
                 ? null
                 : widget.validator?.call(widget.controller.text),
-            errorStyle: widget.errorTextStyle ??  TextStyle(color: BasicColors.red),
+            errorStyle: widget.errorTextStyle ??  TextStyle(color: AppColors.red),
           ),
           validator: widget.validator,
         );
